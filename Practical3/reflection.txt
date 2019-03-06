@@ -1,0 +1,8 @@
+Generally, everything goes well with the aid of teachers.
+Below are several things challenging:
+1. I can't find the "save" button when I want to save the file.
+2. In the “Commit Message” field, I wonder write a brief commit message whether in "summary" blank or "description" blank.
+3. When I move the thingsIlike.txt from my desktop to relevant directory in Gitkaren, some strange words appear.
+4. There are so many confusing things in Github.
+5. I am not sure how to copy a file made in one repository into another repository by Gitkraken.
+6. I wonder how to add pictures or music to website.
