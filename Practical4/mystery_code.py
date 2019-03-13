@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: 
+# Answer: to find prime numbers from 1 to 100.
 
 # Import libraries
 # randint allows drawing a random number, 
@@ -13,6 +13,7 @@ from math import ceil
 p=False
 while p==False:
     p=True
+    #draw a number between 1 and 100
     n = randint(1,100)
     u = ceil(n**(0.5))
     for i in range(2,u+1):
