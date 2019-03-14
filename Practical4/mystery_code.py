@@ -11,10 +11,12 @@ from random import randint
 from math import ceil
 
 p=False
+#p is used to control the loop
 while p==False:
     p=True
     #draw a number between 1 and 100
     n = randint(1,100)
+    #find the factor of n
     u = ceil(n**(0.5))
     for i in range(2,u+1):
         if n%i == 0:
