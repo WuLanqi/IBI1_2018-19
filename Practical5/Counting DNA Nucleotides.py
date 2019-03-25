@@ -22,7 +22,8 @@ import matplotlib.pyplot as plt
 labels = 'A', 'T', 'G', 'C'
 sizes = [6,6,5,4]
 explode = (0,0,0,0)
-plt.pie(sizes,explode=explode, labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
+color= ['pink','lightsteelblue','ivory','orange']
+plt.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%', shadow=False, startangle=90,colors=color)
 ## Equal aspect ratio ensures that pie is drawn as a circle.
 plt.axis =('equal') 
 plt.show()
