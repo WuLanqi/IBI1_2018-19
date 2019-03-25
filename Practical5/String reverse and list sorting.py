@@ -27,7 +27,7 @@ print(l)
 #L=sorted(L, reverse=True)
 #print(L)
 ###below is the way which is provided by teacher
-#s = input("but soft what light in yonder window breaks")
+#s = "but soft what light in yonder window breaks"
 #words = s.split(' ')
 #reverseWords = []
 #for iWord in words:
