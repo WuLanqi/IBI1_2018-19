@@ -18,6 +18,7 @@ while p==False:
     n = randint(1,100)
     #find the factor of n
     u = ceil(n**(0.5))
+    #to confirm whether n is a prime number
     for i in range(2,u+1):
         if n%i == 0:
             p=False
