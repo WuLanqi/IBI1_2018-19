@@ -7,7 +7,8 @@ Created on Wed Mar 20 10:10:24 2019
 """
 
 #a string of words
-s = "but soft what light in yonder window breaks"
+s = input('Give me a string of words : ')
+#e.g. s = "but soft what light in yonder window breaks"
 #turn the string into list
 L = s.split(' ')
 ###below is the way which I figured out since I knew [::-1]

@@ -7,7 +7,8 @@ Created on Wed Mar 20 09:05:30 2019
 """
 
 #give me a DNA string
-s = "ATGCTTCAGAAAGGTCTTACG"
+s=input('Give me a DNA string : ')
+#e.g. s = "ATGCTTCAGAAAGGTCTTACG"
 #count the frequency table of the four nucleotides
 s = list(s)
 myDict= {}
