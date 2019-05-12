@@ -1,0 +1,5 @@
+It took me almost 6 hours to complete this practical. I thought it was not easy.  
+I made several mistakes in the random choice function and I did not realize them until I was coding next two tasks. 
+I enjoyed coding the process of infection and recovery by using for loop and if statement. 
+I was stuck in plotting different results into one figure and I turned to classmates for help. 
+In spatial_SIR experiment, I refined my code according to offered “infection_snippet.py” file because I did not think of the problem of range. 
