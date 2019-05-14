@@ -1,0 +1,11 @@
+Input n integers to get 24
+Try to find any possible computation among these numbers
+No need to output the exact way of how to get 24
+Just count how many steps to get. 24
+
+For each loop: 
+a+b — O(n), a-b — O(n), a*b — O(n*n), a/b — O(n*n)
+O(n)+O(n)+O(n*n)+O(n*n)=O(n*n)
+
+And there are n loops:
+O()=O(n*n)*O(n*n)=O(n**4)
