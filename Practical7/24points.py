@@ -18,7 +18,7 @@ while i:
     data=input("Please input numbers to computer 24:(use ',' to divide them)\n")
     #put the input number into a list
     numlist=data.split(',')
-    #test the input number
+    #check the input numbers
     for char in numlist:
         if re_numtest.match(char):
             continue
@@ -31,10 +31,10 @@ num=list(map(int,numlist))
 
 '''
 n is the length of the num
-if n==2:
-    merging them all available operands
+if n==1:
     if result is 24:
         print
+    
 if n!=2:
     pick two numbers from the list and merge them all available operands
     delete the two picked numbers and put the result back to the list
@@ -42,20 +42,19 @@ if n!=2:
     repeat deleting the two picked numbers and put the result back to the list
     repeat until there is only one value left
 '''
+#create a function for recursion
 #recursion times
 count=0
-#way to get 24
-solution=0
 
 #n is len(num)
 def dfs(n):
+    #global keyword allows you to modify the variable outside of the current scope
     global count
     global solution
     count = count +1
     
     if n==1:
         if(float(num[0])==24):
-            solution = solution +1
             return 1
         else:
             return 0
@@ -65,12 +64,14 @@ def dfs(n):
             #selecte the first two numbers
             a=num[i]
             b=num[j]
-            #
+            #drag the last number into the second position
             num[j]=num[n-1]
+            
             
             num[i]=a+b
             if(dfs(n-1)):
                 return 1
+            
             
             if b > a:
                 num[i]=b-a
@@ -81,9 +82,11 @@ def dfs(n):
                 if(dfs(n-1)):
                     return 1
             
+            
             num[i]=a*b
             if(dfs(n-1)):
                 return 1
+            
             #floats are not as precise as fraction
             if a:
                 num[i]=Fraction(b,a)
@@ -102,5 +105,5 @@ if(dfs(len(num))):
     print('Yes')
 else:
     print('No')
-print('Recursion times:',count,',Solution:',solution)
+print('Recursion times:',count)
     
