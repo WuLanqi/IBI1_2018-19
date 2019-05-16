@@ -10,7 +10,8 @@ from random import randint
 # e.g. ceil(4.2)=5
 from math import ceil
 
-#this is because if n has a factor bigger than [square root of n], there should be a factor smalle than that.
+#math reasoning:
+#if n has a factor bigger than [square root of n], there should be a factor smaller than that.
 #therefore, if a factor cannot be found smaller than [square root of n], n should be a prime number
 
 
