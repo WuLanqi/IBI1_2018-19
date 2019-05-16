@@ -28,24 +28,31 @@ At each time point, we pick susceptible individuals at random to become infected
 We pick infected individuals at random to become recovered. 
 And we then keep track of the numbers of people in all three categories.
 
-for each time point:
+for each time point (loop 1000 time points):
     
-    for each susceptible people in S:
-        d1=random.choice(0 or 1,time,[1-probabilities,probabilities])
-        (0 means healthy, 1 means infected)
-        time = S
-        probabilities = beta * infected person(I)/population(N)
-        d1=sum(d1)
-        S = S-d1
-        I = I+d1
-    for each infected person in I:
-        d2 =random.choice(0 or 1,time,[1-probabilities,probabilities])
-        (0 means stay infected, 1 means recovered)
-        time = I
-        probabilities = gamma
-        d2=sum(d2)
-        I = I-d2
-        R = R+d2     
+-----get infected-----
+    
+    randomly choose 0 or 1 and make S times choices
+    (0 means healthy, 1 means infected)
+    probability for getting infected = beta * infected person(I)/population(N)
+    probability for remaining susceptible = 1 - probability for getting infected
+    sum the chosen number and the number represents the infected persons
+    susceptible population minus the number
+    infected population plus the number
+
+-----recover----------   
+    
+    randomly choose 0 or 1 and make I times choices
+    (0 means stay infected, 1 means recovered)z
+    probability for recovering = gamma
+    probability for remaining susceptible = 1 - gamma
+    sum the chosen number and the number represents the recovered persons
+    infected population minus the number
+    recovered population plus the number    
+
+----------------------
+    append results into the list
+
 """
 
 for i in range(0,1001):

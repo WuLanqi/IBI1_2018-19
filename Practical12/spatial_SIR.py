@@ -25,10 +25,9 @@ gamma=0.05
 '''
 for each time point:
     find infected points using where() function
+    
     for each infected point in infected points:
         get x, y coordinates
-        
-        
         find its 8 neighbours (x-1~x+1,y-1~y+1)
         find x:
             find y:
@@ -36,9 +35,12 @@ for each time point:
                     if (x,y) is not out of range:
                         if (x,y) is susceotible, not infected or not recovered:
                             random choice 0(p=1-beta) or 1(p=beta) and change the value of this point
-        if there is more than one infected person:
-            random choice 1(p=1-gamma) or 2(p=gamma) and change the value of this point
-    if t=10 or 50 or 100:
+                            (0 represents susceptible, 1 represents infected)
+                           
+        random choice 1(p=1-gamma) or 2(p=gamma) and change the value of this point
+        (1 represents stay infected, 2 represents recovered)
+        
+    if time point = 10 or 50 or 100:
         plot
 
 How will you find the infected points? 
@@ -78,10 +80,9 @@ for t in range(0,101):
                         # only infect neighbours that are not already infected
                         if population[xNeighbour,yNeighbour]==0:
                             population[xNeighbour,yNeighbour]=np.random.choice(range(2),1,p=[1-beta,beta])[0]
-        # skip when there is only one person infected (when i=0)
-        if i >= 1:
-            # 0 represents stay infected, 1 represents recovered
-            population[x,y]=np.random.choice(range(1,3),1,p=[1-gamma,gamma])[0]
+       
+        # 1 represents stay infected, 2 represents recovered
+        population[x,y]=np.random.choice(range(1,3),1,p=[1-gamma,gamma])[0]
     
     if t ==10 or t==50 or t==100:
         plt.figure(figsize=(6,4),dpi=150)
