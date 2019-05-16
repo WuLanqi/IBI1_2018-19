@@ -183,6 +183,11 @@ for param in parameters:
     if name == 'k_prey_dies':
         change()
         d2 = param.getAttribute('value')
+        
+#save changes into file
+filexml = open('predator-prey.xml','w')
+DOMTree.writexml(filexml)
+filexml.close()
 
 #---------------------------(almost) old codes---------------------------------
 
@@ -250,6 +255,12 @@ for t in range(0,100):
             b2 = param.getAttribute('value')
         if name == 'k_prey_dies':
             d2 = param.getAttribute('value')
+            
+    #save changes into file
+    filexml = open('predator-prey.xml','w')
+    DOMTree.writexml(filexml)
+    filexml.close()
+
 #-----------------old codes (same in 'change parameters')----------------------
     
     #plotting is same as before
