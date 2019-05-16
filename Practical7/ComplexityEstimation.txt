@@ -1,11 +1,13 @@
 Input n integers to get 24
 Try to find any possible computation among these numbers
 No need to output the exact way of how to get 24
-Just count how many steps to get. 24
+Just count how many steps to get 24
 
-For each loop: 
-a+b — O(n), a-b — O(n), a*b — O(n*n), a/b — O(n*n)
-O(n)+O(n)+O(n*n)+O(n*n)=O(n*n)
+Pick 2 numbers in the list (there are n times recursion)
+For each pick: 
+make 6 operations (a+b, a-b, b-a, a*b, a/b, b/a)
+Put the number into the second position to be ready for next recursion
+Recurse until one number is left
 
-And there are n loops:
-O()=O(n*n)*O(n*n)=O(n**4)
+The overall complexity:
+O()=O((n-1)!^n)
